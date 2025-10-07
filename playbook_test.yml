@@ -1,9 +1,4 @@
-- hosts: client_test
+- hosts: all
   tasks:
-    - name: Ping web servers
-      ping:
-      register: ping_result
-
-      when: 
-        - ping_result is not failed
-        - ping_result.ping == 'pong'
+    - name: Ping all nodes
+   ansible.builtin.ping:
