@@ -1,0 +1,9 @@
+- hosts: client_test
+  tasks:
+    - name: Ping web servers
+      ping:
+      register: ping_result
+
+      when: 
+        - ping_result is not failed
+        - ping_result.ping == 'pong'
