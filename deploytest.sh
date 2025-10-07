@@ -1,2 +1,2 @@
 echo "Début du test";
-echo $HOSTNAME;
+echo $(hostname);
